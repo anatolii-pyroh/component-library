@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Button = () => {
+const Button = ({children}: {children: string}) => {
     return (
-        <button>Click me</button>
+        <button>{children}</button>
     );
 };
 
