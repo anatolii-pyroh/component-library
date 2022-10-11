@@ -66,6 +66,7 @@
       &.loading {
         .loader {
           background: var(--ultra-light-primary);
+          color: var(--primary)
         }
       }
     }
@@ -95,6 +96,7 @@
       &.loading {
         .loader {
           background: var(--white);
+          color: var(--primary);
         }
       }
     }
@@ -127,7 +129,7 @@
         }
 
         & > * {
-          opacity: 0.4;
+          opacity: 0;
         }
       }
     }

@@ -47,7 +47,7 @@ export const ButtonComponent: React.FC<ButtonProps> = ({
       <div className={styles.loader}>
         <SvgIcon src={IconsEnum.loader} size={30} />
       </div>
-      {icon && <SvgIcon src={icon} size={20} />}
+      {icon && !disabled && <SvgIcon src={icon} size={20} />}
       {text && <span>{text}</span>}
     </button>
   );
