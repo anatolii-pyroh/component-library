@@ -26,6 +26,12 @@ export default {
       },
       options: ['primary', 'secondary', 'outlined', 'text'],
     },
+    size: {
+      control: {
+        type: 'select',
+      },
+      options: ['sm', 'md', 'lg'],
+    },
     iconPosition: {
       control: {
         type: 'select',
@@ -67,6 +73,7 @@ export const button = Template.bind({});
 button.args = {
   text: 'Click me',
   variant: ButtonVariantEnum.primary,
+  size: "md",
   disabled: false,
   width: 'content',
   showIcon: true,
