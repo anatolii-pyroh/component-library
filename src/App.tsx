@@ -1,11 +1,10 @@
-import React from 'react';
-import Button from '@components/Button/Button';
-
+import React from "react";
+import { Button } from "@components/Button";
 
 function App() {
   return (
-    <div className="App">
-      <Button>click me</Button>
+    <div className='App'>
+      <Button text={"click me!"} />
     </div>
   );
 }
