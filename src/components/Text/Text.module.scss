@@ -1,0 +1,64 @@
+@use "@styles/index.scss";
+
+.text {
+  &_variant {
+    &_heading {
+      &_1 {
+        font-size: 34px;
+        height: 38px;
+        font-weight: bold;
+      }
+      &_2 {
+        font-size: 28px;
+        height: 36px;
+        font-weight: bold;
+      }
+      &_3 {
+        font-size: 24px;
+        height: 30px;
+        font-weight: bold;
+      }
+      &_4 {
+        font-size: 20px;
+        height: 24px;
+        font-weight: bold;
+      }
+      &_5 {
+        font-size: 18px;
+        height: 24px;
+        font-weight: bold;
+      }
+    }
+    &_subtitle {
+      &_m {
+        font-size: 16px;
+        height: 20px;
+        font-weight: bold;
+      }
+      &_s {
+        font-size: 14px;
+        height: 20px;
+        font-weight: bold;
+      }
+    }
+    &_body {
+      &_m {
+        &_s {
+          font-size: 16px;
+          height: 20px;
+          font-weight: 500;
+        }
+        &_m {
+          font-size: 14px;
+          height: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+    &_caption {
+      font-size: 12px;
+      height: 26px;
+      font-weight: 200;
+    }
+  }
+}

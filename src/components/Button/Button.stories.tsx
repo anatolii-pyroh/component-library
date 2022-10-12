@@ -1,42 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { ComponentStory } from '@storybook/react';
+import { ComponentStory } from "@storybook/react";
 
-import { Button } from '.';
-import { ButtonProps, ButtonVariantEnum } from './Button.types';
+import { Button } from ".";
+import { ButtonProps, ButtonVariantEnum } from "./Button.types";
 
-import { IconsEnum } from '@components/SvgIcon';
-// import { Text, TextVariantsEnum } from '@components/Text';
-
-
+import { IconsEnum } from "@components/SvgIcon";
+import { Text, TextVariantsEnum } from "@components/Text";
 
 export default {
-  title: 'Components/Button',
+  title: "Components/Button",
   component: Button,
   argTypes: {
     width: {
       control: {
-        type: 'select',
+        type: "select",
       },
-      options: ['content', 'full'],
+      options: ["content", "full"],
     },
     variant: {
       control: {
-        type: 'select',
+        type: "select",
       },
-      options: ['primary', 'secondary', 'outlined', 'text'],
+      options: ["primary", "secondary", "outlined", "text"],
     },
     size: {
       control: {
-        type: 'select',
+        type: "select",
       },
-      options: ['sm', 'md', 'lg'],
+      options: ["sm", "md", "lg"],
     },
     iconPosition: {
       control: {
-        type: 'select',
+        type: "select",
       },
-      options: ['left', 'right'],
+      options: ["left", "right"],
     },
   },
 };
@@ -44,8 +42,7 @@ export default {
 const Template: ComponentStory<(Props: ButtonProps & {showIcon: boolean}) => JSX.Element> = ({
   showIcon,
   ...args
-}) => {
-  const [counter, setCounter] = useState(0);
+}) => {const [counter, setCounter] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = () => {
@@ -57,8 +54,7 @@ const Template: ComponentStory<(Props: ButtonProps & {showIcon: boolean}) => JSX
   };
   return (
     <>
-      {/* <Text variant={TextVariantsEnum.Body_L}>Counter: {counter}</Text> */}
-      {counter}
+      <Text variant={TextVariantsEnum.Heading_5}>Counter: {counter}</Text>
       <Button
         onClick={handleClick}
         loading={isLoading}
@@ -71,11 +67,11 @@ const Template: ComponentStory<(Props: ButtonProps & {showIcon: boolean}) => JSX
 
 export const button = Template.bind({});
 button.args = {
-  text: 'Click me',
+  text: "Click me",
   variant: ButtonVariantEnum.primary,
   size: "md",
   disabled: false,
-  width: 'content',
+  width: "content",
   showIcon: true,
-  iconPosition: 'left',
+  iconPosition: "left",
 };
