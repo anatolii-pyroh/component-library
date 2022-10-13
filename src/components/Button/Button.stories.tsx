@@ -54,7 +54,7 @@ const Template: ComponentStory<(Props: ButtonProps & {showIcon: boolean}) => JSX
   };
   return (
     <>
-      <Text variant={TextVariantsEnum.Heading_5}>Counter: {counter}</Text>
+      <Text variant={TextVariantsEnum.Heading_4}>Counter: {counter}</Text>
       <Button
         onClick={handleClick}
         loading={isLoading}

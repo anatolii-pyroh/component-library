@@ -1,6 +1,9 @@
 @use "@styles/index.scss";
 
 .text {
+  display: flex;
+  align-items: center;
+
   &_variant {
     &_heading {
       &_1 {
