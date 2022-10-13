@@ -15,7 +15,7 @@ export enum TextVariantsEnum {
 
 export type TextProps = {
     variant: TextVariantsEnum;
-    color: string;
+    textColor: string;
     children: ReactNode;
 }
 
