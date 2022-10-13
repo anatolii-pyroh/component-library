@@ -3,19 +3,19 @@ import classNames from "classnames";
 
 import styles from "./Text.module.scss";
 import { TextProps } from "./Text.types";
-import { tags } from "./Text.constants";
+import { colors, tags } from "./Text.constants";
 
-export const TextComponent: React.FC<TextProps> = ({ variant, children }) => {
+export const TextComponent: React.FC<TextProps> = ({ variant, color, children }) => {
 
   const CustomTag = `${tags[variant]}` as keyof JSX.IntrinsicElements
   
   const textClass = classNames(
-    styles.text, 
-    {[styles[`text_variant_${variant}`]]: variant}
+    styles.text,
+    styles[`text_variant_${variant}`]
   );
 
   return (
-    <CustomTag className={textClass}>
+    <CustomTag className={textClass} style={{color: `${colors[color]}`}}>
       {children}
     </CustomTag>
   );

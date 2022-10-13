@@ -15,7 +15,7 @@ export default {
       control: { type: "text" },
     },
     size: {
-      control: { type: "radio" },
+      control: { type: "select" },
       options: ["lg", "md", "sm"],
     },
   },
@@ -26,7 +26,7 @@ const Template: ComponentStory<(Props: AvatarProps) => JSX.Element> = (
 ) => {
   return (
     <>
-      <Text variant={TextVariantsEnum.Heading_4}>Random text</Text>
+      <Text variant={TextVariantsEnum.Heading_4} color={"default"}>Random text</Text>
       <Avatar {...args} />
     </>
   );

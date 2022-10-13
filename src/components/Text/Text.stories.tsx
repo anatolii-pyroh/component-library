@@ -9,8 +9,22 @@ export default {
   title: "Components/Text",
   component: Text,
   argTypes: {
+    color: {
+      control: { type: "select" },
+      options: [
+        "default",
+        "profile_background",
+        "grey",
+        "dark_grey",
+        "light_grey",
+        "blue",
+        "red",
+        "green",
+        "orange",
+      ],
+    },
     variant: {
-      control: { type: "radio" },
+      control: { type: "select" },
       options: [
         "heading_1",
         "heading_2",
@@ -38,5 +52,6 @@ const Template: ComponentStory<(Props: TextProps) => JSX.Element> = (args) => (
 export const text = Template.bind({});
 text.args = {
   children: "Random text",
+  color: "default",
   variant: TextVariantsEnum.Heading_1,
 };
