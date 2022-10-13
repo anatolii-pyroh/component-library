@@ -17,3 +17,7 @@ export type TextProps = {
     variant: TextVariantsEnum;
     children: ReactNode;
 }
+
+export type TagsKeys = {
+[keys: string]: string;
+}

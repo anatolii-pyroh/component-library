@@ -16,7 +16,7 @@ export default {
     },
     size: {
       control: { type: "radio" },
-      options: ["sm", "md", "lg"],
+      options: ["lg", "md", "sm"],
     },
   },
 };
@@ -26,7 +26,7 @@ const Template: ComponentStory<(Props: AvatarProps) => JSX.Element> = (
 ) => {
   return (
     <>
-      <Text variant={TextVariantsEnum.Heading_4}>Some random text</Text>
+      <Text variant={TextVariantsEnum.Heading_4}>Random text</Text>
       <Avatar {...args} />
     </>
   );
@@ -35,5 +35,5 @@ const Template: ComponentStory<(Props: AvatarProps) => JSX.Element> = (
 export const avatar = Template.bind({});
 avatar.args = {
   name: "Anatolii Pyroh",
-  size: "md",
+  size: "lg",
 };

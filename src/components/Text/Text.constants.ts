@@ -1,4 +1,6 @@
-export const tags = {
+import { TagsKeys } from "./Text.types";
+
+export const tags: TagsKeys = {
     heading_1: "h1",
     heading_2: "h2",
     heading_3: "h3",

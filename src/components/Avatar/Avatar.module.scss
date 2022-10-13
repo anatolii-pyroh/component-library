@@ -1,5 +1,30 @@
 @use "@styles/index.scss";
 
 .avatar {
+    position: relative;
     background-color: var(--orange);
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+
+    &_size {
+        &_lg {
+            width: 54px;
+            height: 54px;
+            font-size: 24px;
+        }
+        &_md {
+            width: 40px;
+            height: 40px; 
+            font-size: 16px;
+        }
+        &_sm {
+            width: 32px;
+            height: 32px; 
+            font-size: 14px;
+        }
+    }
 }

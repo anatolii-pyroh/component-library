@@ -12,8 +12,12 @@ export const AvatarComponent: React.FC<AvatarProps> = ({ name, size }) => {
 
   const avatarClass = classNames(
     styles.avatar, 
-    {[styles[`avatar_${size}`]]: size}
+    {[styles[`avatar_size_${size}`]]: size}
     );
 
-  return <div className={avatarClass}>{initials[0]}{initials[1]}</div>;
+    return (
+      <div className={avatarClass}>
+        {initials}
+      </div>
+    );
 };

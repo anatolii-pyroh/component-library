@@ -1,4 +1,4 @@
 export type AvatarProps = {
     name: string;
-    size: 'sm' | 'md' | 'lg';
+    size: 'lg' | 'md' | 'sm';
 }
