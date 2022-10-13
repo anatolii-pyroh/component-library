@@ -23,11 +23,11 @@ export default {
         "body_m",
         "caption",
       ],
-      description: "Text size variants"
+      description: "Text size variants",
     },
     children: {
-      name: "label"
-    }
+      name: "label",
+    },
   },
 };
 
