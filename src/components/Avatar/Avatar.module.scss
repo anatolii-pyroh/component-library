@@ -1,29 +1,29 @@
 @use "@styles/index.scss";
 
 .avatar {
-    background-color: var(--orange);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-weight: 700;
+  background-color: var(--orange);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
 
-    &_size {
-        &_lg {
-            width: 54px;
-            height: 54px;
-            font-size: 24px;
-        }
-        &_md {
-            width: 40px;
-            height: 40px; 
-            font-size: 16px;
-        }
-        &_sm {
-            width: 32px;
-            height: 32px; 
-            font-size: 14px;
-        }
+  &_size {
+    &_lg {
+      width: 54px;
+      height: 54px;
+      font-size: 24px;
     }
+    &_md {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+    &_sm {
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
+    }
+  }
 }
