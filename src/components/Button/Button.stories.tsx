@@ -2,8 +2,7 @@ import React, { useState } from "react";
 
 import { ComponentStory } from "@storybook/react";
 
-import { Button } from ".";
-import { ButtonProps, ButtonVariantEnum } from "./Button.types";
+import { Button, ButtonProps, ButtonVariantEnum } from ".";
 
 import { IconsEnum } from "@components/SvgIcon";
 import { Text, TextVariantsEnum } from "@components/Text";

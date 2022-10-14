@@ -19,6 +19,6 @@ export type TextProps = {
     children: ReactNode;
 }
 
-export type TagsAndColors = {
+export type Tags = {
 [keys: string]: string;
 }

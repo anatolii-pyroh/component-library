@@ -2,8 +2,7 @@ import React from "react";
 
 import { ComponentStory } from "@storybook/react";
 
-import { Avatar } from ".";
-import { AvatarProps } from "./Avatar.types";
+import { Avatar, AvatarProps } from ".";
 
 import { Text, TextVariantsEnum } from "@components/Text";
 

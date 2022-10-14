@@ -2,8 +2,7 @@ import React from "react";
 
 import { ComponentStory } from "@storybook/react";
 
-import { Text } from ".";
-import { TextProps, TextVariantsEnum } from "./Text.types";
+import { Text, TextProps, TextVariantsEnum } from ".";
 
 export default {
   title: "Components/Text",
