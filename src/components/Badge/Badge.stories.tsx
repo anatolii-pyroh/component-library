@@ -3,6 +3,7 @@ import React from "react";
 import { ComponentStory } from "@storybook/react";
 
 import { Badge, BadgeProps } from ".";
+import styles from "./Badge.module.scss";
 
 export default {
   title: "Components/Badge",
@@ -28,7 +29,9 @@ export default {
 };
 
 const Template: ComponentStory<(Props: BadgeProps) => JSX.Element> = (args) => (
+  <div className={styles.card} >
   <Badge {...args} />
+  </div>
 );
 
 export const badge = Template.bind({});

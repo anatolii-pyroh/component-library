@@ -1,7 +1,6 @@
 .badge {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  left: 0.8rem;
   color: white;
   width: fit-content;
   height: fit-content;
@@ -11,6 +10,7 @@
 }
 
 .card {
+  position: relative;
   box-sizing: border-box;
   background-color: var(--light-grey);
   border: 2px solid var(--grey);
