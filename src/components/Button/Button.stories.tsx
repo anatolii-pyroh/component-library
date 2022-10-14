@@ -30,8 +30,9 @@ export default {
       options: ["sm", "md", "lg"],
     },
     iconPosition: {
+      name: "icon position",
       control: {
-        type: "select",
+        type: "radio",
       },
       options: ["left", "right"],
     },

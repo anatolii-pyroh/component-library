@@ -1,12 +1,10 @@
 @use "@styles/index.scss";
 
 .avatar {
-    position: relative;
     background-color: var(--orange);
     color: white;
-    text-align: center;
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: center;
     border-radius: 50%;
     font-weight: 700;

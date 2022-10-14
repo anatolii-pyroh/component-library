@@ -9,20 +9,19 @@ export default {
   component: Badge,
   argTypes: {
     text: {
-        control: {type: "text"}
+      control: { type: "text" },
     },
     badgeColor: {
+        name: "badge color",
       control: { type: "select" },
       options: [
-        "default",
-        "profile_background",
-        "grey",
-        "dark_grey",
-        "light_grey",
         "blue",
         "red",
         "green",
+        "dark_green",
         "orange",
+        "dark_orange",
+        "dark_grey",
       ],
     },
   },
@@ -32,8 +31,8 @@ const Template: ComponentStory<(Props: BadgeProps) => JSX.Element> = (args) => (
   <Badge {...args} />
 );
 
-export const badge = Template.bind({})
+export const badge = Template.bind({});
 badge.args = {
-    text: "Badge text",
-    badgeColor: "orange"
-}
+  text: "Badge text",
+  badgeColor: "blue",
+};

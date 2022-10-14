@@ -10,5 +10,7 @@ export const colors: TypeOfColors = {
     blue: "var(--primary)",
     red: "var(--red)",
     green: "var(--green)",
+    dark_green: "var(--dark-green)",
     orange: "var(--orange)",
+    dark_orange: "var(--dark-orange)",
   }

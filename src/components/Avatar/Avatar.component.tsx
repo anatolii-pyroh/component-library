@@ -17,7 +17,7 @@ export const AvatarComponent: React.FC<AvatarProps> = ({ name, size }) => {
 
     return (
       <div className={avatarClass}>
-        {initials}
+        {initials[0] + initials[1]}
       </div>
     );
 };
