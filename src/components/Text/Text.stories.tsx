@@ -9,7 +9,7 @@ export default {
   title: "Components/Text",
   component: Text,
   argTypes: {
-    color: {
+    textColor: {
       control: { type: "select" },
       options: [
         "default",

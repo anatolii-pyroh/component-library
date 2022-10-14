@@ -16,11 +16,11 @@ export const tags: TagsAndColors = {
 export const colors: TagsAndColors = {
     default: "#10203B",
     profile_background: "#263650",
-    dark_grey: "#515B6C",
-    grey: "#9CA4B3",
-    light_grey: "#D7DBE2",
-    blue: "#10A8C9",
-    red: "#D82045",
-    green: "#03D087",
-    orange: "#F2994A",
+    dark_grey: "var(--dark-grey)",
+    grey: "var(--grey)",
+    light_grey: "var(--light-grey)",
+    blue: "var(--primary)",
+    red: "var(--red)",
+    green: "var(--green)",
+    orange: "var(--orange)",
   }
