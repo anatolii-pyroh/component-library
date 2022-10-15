@@ -1,3 +1,3 @@
-export {InputComponent as Input} from './Input.component'
+export { InputComponent as Input } from "./Input.component";
 
-export * from "./Input.types"
+export * from "./Input.types";

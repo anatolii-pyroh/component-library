@@ -2,27 +2,25 @@
 
 .input_container {
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
 
   & input {
     width: 328px;
-    height: 46px;
-    border: 2px solid var(--light-grey);
+    border: 1px solid var(--light-grey);
     border-radius: 4px;
     font-size: 1rem;
-    padding-left: 1rem;
+    padding: 0 1rem;
     outline: none;
   }
 
   & label {
     position: absolute;
     left: 12px;
-    top: -9px;
     padding: 0 5px;
     pointer-events: none;
-    transform: translate(0, 23px) scale(1);
     transform-origin: top left;
+    transform: translate(0, 29px) scale(1);
     transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     color: var(--grey);
     font-size: 1rem;
@@ -35,12 +33,7 @@
   }
 
   &:focus-within label {
-    transform: translate(0, 0px) scale(0.9);
     color: var(--primary);
-  }
-
-  & .filled {
-    transform: translate(0, 0px) scale(0.9);
   }
 
   &_error {
@@ -49,7 +42,6 @@
     }
     label {
       color: var(--red);
-      transform: translate(0, 0px) scale(0.9);
     }
 
     &:focus-within input {
@@ -60,4 +52,54 @@
       color: var(--red);
     }
   }
+
+  &_size {
+    &_lg {
+      input {
+        height: 56px;
+      }
+      label {
+        top: -9px;
+      }
+      &:focus-within label {
+        transform: translate(0, 0px) scale(0.9);
+      }
+
+      & .filled {
+        transform: translate(0, 0px) scale(0.9);
+      }
+    }
+    &_md {
+      input {
+        height: 40px;
+      }
+      label {
+        top: -17px;
+      }
+      &:focus-within label {
+        transform: translate(0, 8px) scale(0.9);
+      }
+
+      & .filled {
+        transform: translate(0, 8px) scale(0.9);
+      }
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--grey);
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: var(--grey);
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: var(--grey);
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: var(--grey);
 }

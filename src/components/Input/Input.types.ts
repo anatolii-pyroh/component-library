@@ -1,5 +1,6 @@
 export type InputProps = {
-    label: string;
+    size: string;
     type?: string;
+    withLabel: boolean;
     error?: boolean;
 }
