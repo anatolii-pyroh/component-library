@@ -1,5 +1,9 @@
 @use "@styles/index.scss";
 
+:root {
+  --placeholder-color: var(--grey);
+}
+
 .input_container {
   position: relative;
   display: inline-flex;
@@ -37,6 +41,7 @@
   }
 
   &_error {
+    --placeholder-color: var(--red);
     input {
       border-color: var(--red);
     }
@@ -89,17 +94,17 @@
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: var(--grey);
+  color: var(--placeholder-color);
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: var(--grey);
+  color: var(--placeholder-color);
 }
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: var(--grey);
+  color: var(--placeholder-color);
 }
 :-moz-placeholder {
   /* Firefox 18- */
-  color: var(--grey);
+  color: var(--placeholder-color);
 }

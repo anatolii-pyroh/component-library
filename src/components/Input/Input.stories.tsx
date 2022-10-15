@@ -20,6 +20,9 @@ export default {
     withLabel: {
       name: "with label",
     },
+    showErrorText: {
+      name: "show error text"
+    }
   },
 };
 
@@ -33,4 +36,5 @@ input.args = {
   size: "lg",
   withLabel: true,
   error: false,
+  showErrorText: false
 };

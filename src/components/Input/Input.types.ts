@@ -1,6 +1,7 @@
 export type InputProps = {
-    size: string;
+    size?: string;
     type?: string;
-    withLabel: boolean;
+    withLabel?: boolean;
     error?: boolean;
+    showErrorText: boolean;
 }

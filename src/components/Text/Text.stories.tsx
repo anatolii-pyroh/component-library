@@ -9,6 +9,7 @@ export default {
   component: Text,
   argTypes: {
     textColor: {
+      name: "text color",
       control: { type: "select" },
       options: [
         "default",
