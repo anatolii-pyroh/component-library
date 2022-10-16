@@ -24,6 +24,7 @@ export const InputComponent: React.FC<InputProps> = ({
   });
   const iconClass = classNames(styles.icon, {
     [styles[`icon_size_${size}`]]: size,
+    [styles[`icon_rotate`]]: icon === "arrow"
   });
 
   const handleOnBlur = (e: React.FocusEvent<HTMLInputElement, Element>) => {

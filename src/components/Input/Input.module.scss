@@ -91,6 +91,23 @@
       }
     }
   }
+
+  &:focus-within {
+    .icon {
+      &_rotate {
+        transition: all 0.25s ease;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &:not(:focus-within) {
+    .icon {
+      &_rotate {
+        transition: all 0.25s ease;
+        transform: rotate(0deg);
+      }
+    }
+  }
 }
 
 .icon {
@@ -106,6 +123,9 @@
       top: 0.6rem;
     }
   }
+}
+
+.input_container {
 }
 .error {
   margin: 6px 0 0 2px;
