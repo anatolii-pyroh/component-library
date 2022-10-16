@@ -20,8 +20,15 @@ export default {
     withLabel: {
       name: "with label",
     },
-    showErrorText: {
-      name: "show error text"
+    icon: {
+      control: {type: "select"},
+      options: ["arrow", "eye"]
+    },
+    customPlaceholder: {
+      name: "custom placeholder"
+    },
+    errorText: {
+      name: "error text"
     }
   },
 };
@@ -32,9 +39,12 @@ const Template: ComponentStory<(Props: InputProps) => JSX.Element> = (args) => {
 
 export const input = Template.bind({});
 input.args = {
-  type: "email",
+  type: "text",
   size: "lg",
+  showIcon: true,
   withLabel: true,
   error: false,
-  showErrorText: false
+  icon: "arrow",
+  customPlaceholder: "Текст",
+  errorText: "Текст ошибки"
 };

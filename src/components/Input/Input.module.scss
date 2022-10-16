@@ -21,6 +21,7 @@
   & label {
     position: absolute;
     left: 12px;
+    height: 1.1rem;
     padding: 0 5px;
     pointer-events: none;
     transform-origin: top left;
@@ -92,6 +93,25 @@
   }
 }
 
+.icon {
+  cursor: pointer;
+  position: absolute;
+  right: 1.1rem;
+
+  &_size {
+    &_lg {
+      top: 1.1rem;
+    }
+    &_md {
+      top: 0.6rem;
+    }
+  }
+}
+.error {
+  margin: 6px 0 0 2px;
+  color: var(--red);
+}
+
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: var(--placeholder-color);
@@ -107,4 +127,9 @@
 :-moz-placeholder {
   /* Firefox 18- */
   color: var(--placeholder-color);
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="rgb(16, 168, 201)" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
 }

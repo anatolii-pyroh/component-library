@@ -1,7 +1,10 @@
 export type InputProps = {
     size?: string;
     type?: string;
+    icon?: string;
+    showIcon?: boolean;
     withLabel?: boolean;
+    customPlaceholder: string;
     error?: boolean;
-    showErrorText: boolean;
+    errorText?: string;
 }

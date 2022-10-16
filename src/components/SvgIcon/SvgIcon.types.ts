@@ -2,6 +2,8 @@ export enum IconsEnum {
   // common
   loader = '/icons/common/loader.svg',
   search = '/icons/common/search.svg',
+  eye = "/icons/common/eye.svg",
+  arrow = "icons/common/arrow.svg"
 }
 
 export type SvgIconProps = {
