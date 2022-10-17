@@ -1,11 +1,11 @@
 import { ComponentStory } from "@storybook/react";
 import React from "react";
 
-import { Checkbox, CheckboxProps } from ".";
+import { CheckboxAndToggle, CheckboxProps } from ".";
 
 export default {
-  title: "Components/Checkbox",
-  component: Checkbox,
+  title: "Components/CheckboxAndToggle",
+  component: CheckboxAndToggle,
   argTypes: {
     type: {
       control: {type: "radio"},
@@ -22,10 +22,10 @@ export default {
 
 const Template: ComponentStory<(Props: CheckboxProps) => JSX.Element> = (
   args
-) => <Checkbox {...args} />;
+) => <CheckboxAndToggle {...args} />;
 
-export const checkbox = Template.bind({});
-checkbox.args = {
+export const checkboxAndToggle = Template.bind({});
+checkboxAndToggle.args = {
   type: "checkbox",
   showLabel: true,
   labelText: "Label text",
