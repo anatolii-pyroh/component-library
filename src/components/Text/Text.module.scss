@@ -1,9 +1,8 @@
 @use "@styles/index.scss";
 
 .text {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 1rem;
 
   &_variant {
     &_heading {

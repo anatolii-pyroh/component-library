@@ -25,7 +25,7 @@ const Template: ComponentStory<(Props: AvatarProps) => JSX.Element> = (
 ) => {
   return (
     <>
-      <Text variant={TextVariantsEnum.Heading_4} textColor="default">Random text</Text>
+      <Text variant={TextVariantsEnum.Heading_4} textColor="default" style={{marginBottom: "1rem"}}>Random text</Text>
       <Avatar {...args} />
     </>
   );

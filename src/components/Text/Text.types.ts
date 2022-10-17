@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 export enum TextVariantsEnum {
     Heading_1 = "heading_1",
@@ -17,6 +17,7 @@ export type TextProps = {
     variant: TextVariantsEnum;
     textColor: string;
     children: ReactNode;
+    style?: React.CSSProperties
 }
 
 export type Tags = {
