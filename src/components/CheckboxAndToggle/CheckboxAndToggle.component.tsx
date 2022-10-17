@@ -1,10 +1,11 @@
 import React from "react";
-
-import { CheckboxProps } from "./CheckboxAndToggle.types";
-import styles from "./CheckboxAndToggle.module.scss";
+import classNames from "classnames";
 
 import { Text, TextVariantsEnum } from "@components/Text";
-import classNames from "classnames";
+
+import styles from "./CheckboxAndToggle.module.scss";
+import { CheckboxProps } from "./CheckboxAndToggle.types";
+
 
 export const CheckboxAndToggleComponent: React.FC<CheckboxProps> = ({
   showLabel,

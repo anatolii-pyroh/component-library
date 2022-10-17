@@ -1,10 +1,10 @@
 import React from 'react';
-import classNames from 'classnames';
 import { ReactSVG } from 'react-svg';
-
-import { SvgIconProps } from './SvgIcon.types';
+import classNames from 'classnames';
 
 import styles from './SvgIcon.module.scss';
+import { SvgIconProps } from './SvgIcon.types';
+
 
 export const SvgIconComponent: React.FC<SvgIconProps> = ({
   src,

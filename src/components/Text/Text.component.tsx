@@ -1,11 +1,12 @@
 import React from "react";
 import classNames from "classnames";
 
+import { colors } from "@components/colors.constants";
+
 import styles from "./Text.module.scss";
 import { TextProps } from "./Text.types";
 import { tags } from "./Text.constants";
 
-import { colors } from "@components/colors.constants";
 
 export const TextComponent: React.FC<TextProps> = ({
   variant,

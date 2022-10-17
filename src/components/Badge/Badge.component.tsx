@@ -1,9 +1,10 @@
 import React from "react";
 
+import { colors } from "@components/colors.constants";
+
 import styles from "./Badge.module.scss";
 import { BadgeProps } from "./Badge.types";
 
-import { colors } from "@components/colors.constants";
 
 export const BadgeComponent: React.FC<BadgeProps> = ({ badgeColor, text }) => {
   

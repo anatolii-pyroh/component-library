@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
+
+import { IconsEnum, SvgIcon } from "@components/SvgIcon";
 
 import styles from "./Input.module.scss";
 import { InputProps } from "./Input.types";
 
-import { IconsEnum, SvgIcon } from "@components/SvgIcon";
 
 export const InputComponent: React.FC<InputProps> = ({
   size,
@@ -48,7 +49,7 @@ export const InputComponent: React.FC<InputProps> = ({
         </label>
       )}
 
-      {showIcon && (
+      {showIcon && type !== "date" && (
         <div className={iconClass}>
          {icon === "arrow" &&  <SvgIcon src={IconsEnum.arrow} size={20} />}
          {icon === "eye" && <SvgIcon src={IconsEnum.eye} size={20} />}

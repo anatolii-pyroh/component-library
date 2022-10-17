@@ -1,9 +1,10 @@
 import React from "react";
 
+import { Text, TextVariantsEnum } from "@components/Text";
+
 import styles from "./RadioButton.module.scss";
 import { RadioButtonProps } from "./RadioButton.types";
 
-import { Text, TextVariantsEnum } from "@components/Text";
 
 export const RadioButtonComponent: React.FC<RadioButtonProps> = ({
   showLabel,
@@ -11,7 +12,7 @@ export const RadioButtonComponent: React.FC<RadioButtonProps> = ({
 }) => {
   return (
     <div className={styles["radio_button"]}>
-      <input type='radio' />
+      <input type='radio'/>
       <Text
         textColor='default'
         variant={TextVariantsEnum.Body_L}

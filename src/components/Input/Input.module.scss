@@ -1,5 +1,3 @@
-@use "@styles/index.scss";
-
 :root {
   --placeholder-color: var(--grey);
 }
@@ -125,8 +123,6 @@
   }
 }
 
-.input_container {
-}
 .error {
   margin: 6px 0 0 2px;
   color: var(--red);

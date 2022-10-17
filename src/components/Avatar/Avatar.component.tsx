@@ -4,6 +4,7 @@ import classNames from "classnames";
 import styles from "./Avatar.module.scss";
 import { AvatarProps } from "./Avatar.types";
 
+
 export const AvatarComponent: React.FC<AvatarProps> = ({ name, size }) => {
   let initials = name
     .split(" ")
