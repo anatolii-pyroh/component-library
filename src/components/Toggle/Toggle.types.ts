@@ -1,4 +1,4 @@
-export type CheckboxProps = {
+export type ToggleProps = {
     showLabel?: boolean;
     labelText?: string;
 }

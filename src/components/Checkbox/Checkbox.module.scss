@@ -4,6 +4,10 @@
   align-items: center;
   gap: 1rem;
 
+  & input {
+    visibility: hidden;
+  }
+
   & label {
     background-color: var(--white);
     border: 1px solid var(--grey);
@@ -29,15 +33,12 @@
     transform: rotate(-45deg);
     width: 7px;
   }
-  & input[type="checkbox"] {
-    visibility: hidden;
-  }
 
-  & input[type="checkbox"]:checked + label {
+  & input:checked + label {
     background-color: var(--primary);
     border-color: var(--primary);
   }
-  & input[type="checkbox"]:checked + label::after {
+  & input:checked + label::after {
     opacity: 1;
   }
 }
