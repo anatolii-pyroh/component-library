@@ -20,7 +20,7 @@
     border-radius: 10px;
   }
 
-  .slider:before {
+  .slider:after {
     position: absolute;
     content: "";
     width: 10px;
@@ -35,10 +35,8 @@
   input:checked + .slider {
     background-color: var(--primary);
   }
-  input:focus + .slider {
-    box-shadow: 0 0 1px var(--primary);
-  }
-  input:checked + .slider:before {
+
+  input:checked + .slider:after {
     transform: translateX(16px);
   }
 }
