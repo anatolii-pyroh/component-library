@@ -53,6 +53,7 @@ export const InputComponent: React.FC<InputProps> = ({
         <div className={iconClass}>
          {icon === "arrow" &&  <SvgIcon src={IconsEnum.arrow} size={20} />}
          {icon === "eye" && <SvgIcon src={IconsEnum.eye} size={20} />}
+         {icon === "currency" && <SvgIcon src={IconsEnum.currency} size={20} />}
         </div>
       )}
 

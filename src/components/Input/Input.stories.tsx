@@ -22,7 +22,7 @@ export default {
     },
     icon: {
       control: {type: "select"},
-      options: ["arrow", "eye"]
+      options: ["arrow", "eye", "currency"]
     },
     customPlaceholder: {
       name: "custom placeholder"
