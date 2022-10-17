@@ -9,10 +9,11 @@ import { RadioButtonProps } from "./RadioButton.types";
 export const RadioButtonComponent: React.FC<RadioButtonProps> = ({
   showLabel,
   labelText,
+  name
 }) => {
   return (
     <div className={styles["radio_button"]}>
-      <input type='radio'/>
+      <input type='radio' name={name}/>
       <Text
         textColor='default'
         variant={TextVariantsEnum.Body_L}

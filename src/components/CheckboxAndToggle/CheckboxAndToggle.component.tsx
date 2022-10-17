@@ -11,6 +11,7 @@ export const CheckboxAndToggleComponent: React.FC<CheckboxProps> = ({
   showLabel,
   labelText,
   type,
+  id
 }) => {
   const checkboxClass = classNames({
     [styles.checkbox]: type === "checkbox",
@@ -19,8 +20,8 @@ export const CheckboxAndToggleComponent: React.FC<CheckboxProps> = ({
 
   return (
     <div className={checkboxClass}>
-      <input type='checkbox' id={type} name={type} />
-      <label htmlFor={type}></label>
+      <input type='checkbox' id={id}/>
+      <label htmlFor={id}></label>
       <Text textColor='default' variant={TextVariantsEnum.Body_L}>
         {showLabel && labelText}
       </Text>
