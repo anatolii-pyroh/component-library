@@ -11,12 +11,10 @@ export const ToggleComponent: React.FC<ToggleProps> = ({
 }) => {
   return (
     <div className={styles.checkbox}>
-      <label>
-        <input type='checkbox' />
-        <div className={styles.slider}></div>
-      </label>
+      <input type='checkbox' id='checkbox' />
+      <label htmlFor='checkbox'></label>
       {showLabel && (
-        <Text variant={TextVariantsEnum.Body_L} textColor='default'>
+        <Text textColor='default' variant={TextVariantsEnum.Body_L}>
           {labelText}
         </Text>
       )}
