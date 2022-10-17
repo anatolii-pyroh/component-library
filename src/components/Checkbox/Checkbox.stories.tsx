@@ -7,6 +7,10 @@ export default {
   title: "Components/Checkbox",
   component: Checkbox,
   argTypes: {
+    type: {
+      control: {type: "radio"},
+      options: ["checkbox", "toggle"]
+    },
     showLabel: {
       name: "show label",
     },
@@ -22,6 +26,7 @@ const Template: ComponentStory<(Props: CheckboxProps) => JSX.Element> = (
 
 export const checkbox = Template.bind({});
 checkbox.args = {
+  type: "checkbox",
   showLabel: true,
   labelText: "Label text",
 };
