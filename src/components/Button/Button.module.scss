@@ -58,7 +58,7 @@
       &.disabled {
         background: var(--ultra-light-primary);
 
-        & > * {
+        & * {
           opacity: 0.4;
         }
       }
