@@ -6,7 +6,17 @@ import { RadioButton, RadioButtonProps } from ".";
 export default {
   title: "Components/RadioButton",
   component: RadioButton,
-  argTypes: {},
+  argTypes: {
+    showLabel: {
+      name: "show label",
+    },
+    labelText: {
+      name: "label text",
+    },
+    name: {
+      name: "input attribute name"
+    }
+  },
 };
 
 const Template: ComponentStory<(Props: RadioButtonProps) => JSX.Element> = (
@@ -16,5 +26,6 @@ const Template: ComponentStory<(Props: RadioButtonProps) => JSX.Element> = (
 export const radioButton = Template.bind({})
 radioButton.args = {
     showLabel: true,
-    labelText: "Label text"
+    labelText: "Label text",
+    name: "inputName"
 }

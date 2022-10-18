@@ -29,4 +29,5 @@ checkboxAndToggle.args = {
   type: "checkbox",
   showLabel: true,
   labelText: "Label text",
+  id: "inputId"
 };
