@@ -1,6 +1,7 @@
 import React from "react";
 
-import { colors } from "@components/colors.constants";
+import { colors } from "@helpers/colors.constants";
+
 
 import styles from "./Badge.module.scss";
 import { BadgeProps } from "./Badge.types";

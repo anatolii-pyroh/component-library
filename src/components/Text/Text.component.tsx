@@ -1,12 +1,11 @@
 import React from "react";
 import classNames from "classnames";
 
-import { colors } from "@components/colors.constants";
+import { colors } from "@helpers/colors.constants";
 
 import styles from "./Text.module.scss";
 import { TextProps } from "./Text.types";
 import { tags } from "./Text.constants";
-
 
 export const TextComponent: React.FC<TextProps> = ({
   variant,
@@ -20,9 +19,7 @@ export const TextComponent: React.FC<TextProps> = ({
 
   return (
     <CustomTag className={textClass} style={style}>
-      <span style={{ color: `${colors[textColor]}` }}>
-      {children}
-      </span>
+      <span style={{ color: `${colors[textColor]}` }}>{children}</span>
     </CustomTag>
   );
 };
