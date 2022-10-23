@@ -57,7 +57,7 @@ export const ModalComponent: React.FC<ModalProps> = ({
             {children}
           </Modal>
         </Backdrop>,
-        document.getElementById("root")!
+        document.getElementById("modal")! || document.getElementById("root")
       )}
     </React.Fragment>
   );

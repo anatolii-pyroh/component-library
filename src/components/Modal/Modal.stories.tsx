@@ -16,6 +16,8 @@ export default {
     },
     onCloseModal: {
       control: false,
+      description: "Close modal window function",
+      name: "close function"
     },
   },
 };
@@ -32,7 +34,7 @@ const Template: ComponentStory<
         onClick={() => setShowModal(!showModal)}
       />
       {showModal && (
-        <Modal {...args} onCloseModal={() => setShowModal(!showModal)} />
+        <Modal {...args} onCloseModal={() => setShowModal(!showModal)}>Modal content</Modal>
       )}
     </>
   );
