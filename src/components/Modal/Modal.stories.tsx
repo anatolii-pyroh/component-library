@@ -7,17 +7,22 @@ import { TextVariantsEnum } from "@components/Text";
 import { Button } from "@components/Button";
 
 export default {
-  title: "Components/Modal",
+  title: "Components/ModalAndSideModal",
   component: Modal,
   argTypes: {
-    variant: {
+    modalType: {
+      name: "type of modal",
       control: { type: "radio" },
-      options: ["heading_2", "heading_3"],
+      options: ["default", "side"],
+    },
+    variant: {
+      name: "title size",
+      control: { type: "radio" },
+      options: ["heading_3", "heading_2"],
     },
     onCloseModal: {
-      control: false,
       description: "Close modal window function",
-      name: "close function"
+      name: "close function",
     },
   },
 };
@@ -34,14 +39,17 @@ const Template: ComponentStory<
         onClick={() => setShowModal(!showModal)}
       />
       {showModal && (
-        <Modal {...args} onCloseModal={() => setShowModal(!showModal)}>Modal content</Modal>
+        <Modal {...args} onCloseModal={() => setShowModal(!showModal)}>
+          Modal content
+        </Modal>
       )}
     </>
   );
 };
 
-export const modal = Template.bind({});
-modal.args = {
+export const modalAndSideModal = Template.bind({});
+modalAndSideModal.args = {
   title: "Title text",
+  modalType: "default",
   variant: TextVariantsEnum.Heading_3,
 };

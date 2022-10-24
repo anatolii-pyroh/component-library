@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import ReactDOM from "react-dom";
+import classNames from "classnames";
 
 import styles from "./Modal.module.scss";
 import { BackdropProps, ModalProps } from "./Modal.types";
@@ -26,10 +27,17 @@ const Modal: React.FC<ModalProps> = ({
   children,
   title,
   variant,
+  modalType = "default",
   onCloseModal,
 }) => {
+  
+  const modalClass = classNames({
+    [styles.modal]: modalType === "default",
+    [styles["side_modal"]]: modalType === "side",
+  });
+
   return (
-    <div className={styles.modal}>
+    <div className={modalClass}>
       <Text
         variant={variant}
         textColor='default'
@@ -45,6 +53,7 @@ const Modal: React.FC<ModalProps> = ({
 
 export const ModalComponent: React.FC<ModalProps> = ({
   children,
+  modalType,
   title,
   variant,
   onCloseModal,
@@ -53,7 +62,12 @@ export const ModalComponent: React.FC<ModalProps> = ({
     <React.Fragment>
       {ReactDOM.createPortal(
         <Backdrop onCloseModal={onCloseModal}>
-          <Modal title={title} variant={variant} onCloseModal={onCloseModal}>
+          <Modal
+            title={title}
+            variant={variant}
+            onCloseModal={onCloseModal}
+            modalType={modalType}
+          >
             {children}
           </Modal>
         </Backdrop>,

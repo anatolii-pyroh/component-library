@@ -8,6 +8,7 @@ export type BackdropProps = {
 
 export type ModalProps = {
   onCloseModal: () => void;
+  modalType?: "default" | "side";
   children: ReactNode;
   title?: string;
   variant: TextVariantsEnum;
