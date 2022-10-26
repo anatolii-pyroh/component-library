@@ -89,26 +89,10 @@
       }
     }
   }
-
-  &:focus-within {
-    .icon {
-      &_rotate {
-        transition: all 0.25s ease;
-        transform: rotate(180deg);
-      }
-    }
-  }
-  &:not(:focus-within) {
-    .icon {
-      &_rotate {
-        transition: all 0.25s ease;
-        transform: rotate(0deg);
-      }
-    }
-  }
 }
 
 .icon {
+  color: var(--grey);
   cursor: pointer;
   position: absolute;
   right: 1.1rem;

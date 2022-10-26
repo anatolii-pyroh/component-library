@@ -22,10 +22,7 @@ export default {
     },
     icon: {
       control: {type: "select"},
-      options: ["arrow", "eye", "currency"]
-    },
-    customPlaceholder: {
-      name: "custom placeholder"
+      options: ["eye", "currency"]
     },
     errorText: {
       name: "error text"
@@ -44,7 +41,7 @@ input.args = {
   showIcon: true,
   withLabel: true,
   error: false,
-  icon: "arrow",
-  customPlaceholder: "Текст",
+  icon: "eye",
+  placeholder: "Текст",
   errorText: "Текст ошибки"
 };

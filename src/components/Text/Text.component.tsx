@@ -17,9 +17,13 @@ export const TextComponent: React.FC<TextProps> = ({
 
   const textClass = classNames(styles.text, styles[`text_variant_${variant}`]);
 
+  const customStyle = {
+    ...style,
+    color: textColor ? `${colors[textColor]}` : "#10203B",
+  };
   return (
-    <CustomTag className={textClass} style={style}>
-      <span style={{ color: `${colors[textColor]}` }}>{children}</span>
+    <CustomTag className={textClass} style={customStyle}>
+      {children}
     </CustomTag>
   );
 };

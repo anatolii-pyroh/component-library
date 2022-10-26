@@ -52,6 +52,5 @@ const Template: ComponentStory<(Props: TextProps) => JSX.Element> = (args) => (
 export const text = Template.bind({});
 text.args = {
   children: "Random text",
-  textColor: "default",
   variant: TextVariantsEnum.Heading_1,
 };

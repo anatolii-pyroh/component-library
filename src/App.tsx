@@ -21,7 +21,7 @@ function App() {
       <CheckboxAndToggle type="checkbox" showLabel={true} labelText="Label text" id="2"/>
       <CheckboxAndToggle type="checkbox" showLabel={true} labelText="Label text" id="3"/>
       </div>
-      <Input customPlaceholder="Placeholder text" type="text" size="lg" withLabel={true}/>
+      <Input placeholder="Placeholder text" type="text" size="lg" withLabel={true}/>
       <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
       <RadioButton showLabel={true} labelText="Label text" name="1"/>
       <RadioButton showLabel={true} labelText="Label text" name="1"/>
@@ -29,7 +29,7 @@ function App() {
       <RadioButton showLabel={true} labelText="Label text" name="1"/>
       </div>
       <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-      <Text textColor="Primary" variant={TextVariantsEnum.Heading_1} style={{margin: "1rem"}}>Random text</Text>
+      <Text textColor="blue" variant={TextVariantsEnum.Heading_1} style={{margin: "1rem"}}>Random text</Text>
       <Button text="Show modal window" width="content" onClick={() => setShowModal(!showModal)}/>
       </div>
       {showModal && 

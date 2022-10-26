@@ -1,7 +1,7 @@
-export type TypeOfColors = {
+export type ColorsType = {
     [keys: string]: string;
 }
-export const colors: TypeOfColors = {
+export const colors: ColorsType = {
     default: "#10203B",
     profile_background: "#263650",
     dark_grey: "var(--dark-grey)",

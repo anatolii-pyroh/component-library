@@ -4,7 +4,7 @@ export type InputProps = {
     icon?: string;
     showIcon?: boolean;
     withLabel?: boolean;
-    customPlaceholder: string;
+    placeholder: string;
     error?: boolean;
     errorText?: string;
 }
