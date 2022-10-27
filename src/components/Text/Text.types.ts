@@ -17,7 +17,8 @@ export type TextProps = {
     variant: TextVariantsEnum;
     textColor?: string;
     children: ReactNode;
-    style?: React.CSSProperties
+    style?: React.CSSProperties;
+    className?: string;
 }
 
 export type Tags = {

@@ -12,10 +12,15 @@ export const TextComponent: React.FC<TextProps> = ({
   textColor,
   style,
   children,
+  className,
 }) => {
   const CustomTag = `${tags[variant]}` as keyof JSX.IntrinsicElements;
 
-  const textClass = classNames(styles.text, styles[`text_variant_${variant}`]);
+  const textClass = classNames(
+    styles.text,
+    styles[`text_variant_${variant}`],
+    className
+  );
 
   const customStyle = {
     ...style,

@@ -4,7 +4,8 @@ export enum IconsEnum {
   search = '/icons/common/search.svg',
   eye = "/icons/common/eye.svg",
   arrow = "icons/common/arrow.svg",
-  currency = "icons/common/currency.svg"
+  currency = "icons/common/currency.svg",
+  star = "icons/common/star.svg"
 }
 
 export type SvgIconProps = {
