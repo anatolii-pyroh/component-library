@@ -21,6 +21,7 @@ export const PriceCalculator = ({ price }: { price: number }) => {
       variant={TextVariantsEnum.Heading_4}
       className={styles["price_calculator"]}
     >
+      {/* default price */}
       <div className={styles["price_with_padding"]}>
         {price.toLocaleString("ru-RU")}
         <SvgIcon
@@ -29,6 +30,7 @@ export const PriceCalculator = ({ price }: { price: number }) => {
           style={{ margin: "4px 0 0 6px" }}
         />
       </div>
+
       <div className={styles["price_input"]}>
         <span className={styles.minus} onClick={handleMinusValue} />
         <input
@@ -39,13 +41,19 @@ export const PriceCalculator = ({ price }: { price: number }) => {
         />
         <span className={styles.plus} onClick={handlePlusValue} />
       </div>
+
       <Text
         variant={TextVariantsEnum.Caption}
         style={{ marginLeft: "2.5rem", marginRight: "11px" }}
       >
         Общая стоимость
       </Text>
-      <div className={styles["price_with_padding"]} style={{position: "absolute", right: "20px"}}>
+
+      {/* default price multiplied by value in input */}
+      <div
+        className={styles["price_with_padding"]}
+        style={{ position: "absolute", right: "20px" }}
+      >
         {totalPrice.toLocaleString("ru-RU")}{" "}
         <SvgIcon
           src={IconsEnum.currency}
