@@ -14,7 +14,9 @@ export default {
       name: "label text",
     },
     name: {
-      name: "input attribute name"
+      table: {
+        disable: true
+      }
     }
   },
 };

@@ -21,8 +21,9 @@ export default {
       options: ["heading_3", "heading_2"],
     },
     onCloseModal: {
-      description: "Close modal window function",
-      name: "close function",
+      table: {
+        disable: true
+      }
     },
   },
 };

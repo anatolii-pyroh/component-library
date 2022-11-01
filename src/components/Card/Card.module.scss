@@ -32,7 +32,7 @@
       & .rating {
         margin-top: 0.2rem;
       }
-      
+
       & .description {
         margin-top: 1.5rem;
       }
@@ -53,8 +53,96 @@
       padding: 20px;
 
       & .img {
+        float: left;
+        margin: 13px 12px 13px 0;
         width: 152px;
         height: 104px;
+      }
+
+      & .name {
+        display: inline-flex;
+      }
+
+      & .model {
+        display: inline-flex;
+        margin-left: 12px;
+      }
+
+      & .rating {
+        margin-top: 12px;
+      }
+
+      & .description {
+        margin-top: 15px;
+      }
+
+      & .delivery {
+        gap: 12px;
+        margin-top: 5px;
+        font-size: 12px;
+
+        & span {
+          color: var(--grey);
+        }
+      }
+
+      & .price {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      & .price_calculator {
+        margin: 25px 0;
+        display: inline-flex;
+
+        & .price_with_padding {
+          width: 120px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 14px 12px;
+          background-color: #f9f9fa;
+        }
+
+        & .price_input {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          & .minus::before {
+            display: block;
+            content: "";
+            width: 14px;
+            border: 1px solid var(--grey);
+            margin-left: 20px;
+          }
+
+          & .plus::before {
+            position: absolute;
+            content: "";
+            width: 14px;
+            border: 1px solid var(--grey);
+          }
+
+          & .plus::after {
+            position: absolute;
+            content: "";
+            width: 14px;
+            border: 1px solid var(--grey);
+            transform: rotate(90deg);
+          }
+        }
+
+        & input {
+          width: 80px;
+          height: 40px;
+          border: 1px solid var(--light-grey);
+          border-radius: 4px;
+          text-align: center;
+          font-size: 20px;
+        }
       }
     }
   }

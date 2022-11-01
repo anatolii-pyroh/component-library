@@ -4,5 +4,6 @@ export type CardProps = {
     name?: string;
     model?: string;
     description?: string;
+    deliveryDate?: Date,
     price?: number;
 }

@@ -5,14 +5,16 @@ import styles from "./Card.module.scss";
 import { CardProps } from "./Card.types";
 
 import {
+  Delivery,
   Description,
   Img,
   Model,
   Name,
+  PriceCalculator,
   PriceWithButton,
   RatingStars,
 } from "@components/CardParts";
-
+import { Badge } from "@components/Badge";
 
 export const CardComponent: React.FC<CardProps> = ({
   size,
@@ -20,6 +22,7 @@ export const CardComponent: React.FC<CardProps> = ({
   name,
   model,
   description,
+  deliveryDate,
   price,
 }) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -34,12 +37,15 @@ export const CardComponent: React.FC<CardProps> = ({
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
+      <Badge text='Text' badgeColor='orange' />
       <Img src={imgSrc} alt='product img' />
-      <Name name={name} isHovering={isHovering} />
-      <Model model={model} />
-      <RatingStars/>
-      <Description description={description} />
-      <PriceWithButton price={price} />
+      <Name name={name} isHovering={isHovering} size={size} />
+      <Model model={model} size={size} />
+      <RatingStars />
+      <Description description={description} size={size}/>
+      {size === "lg" && deliveryDate && <Delivery deliveryDate={deliveryDate}/>}
+      <PriceWithButton price={price} size={size}/>
+      {size === "lg" && price && <PriceCalculator price={price} />}
     </div>
   );
 };

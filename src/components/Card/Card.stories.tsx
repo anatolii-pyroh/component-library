@@ -6,19 +6,31 @@ export default {
   title: "Components/Card",
   component: Card,
   argTypes: {
+    imgSrc: {
+      name: "link to image",
+    },
     size: {
       control: { type: "radio" },
       options: ["sm", "lg"],
+    },
+    deliveryDate: {
+      name: "delivery date",
+      table: {
+        disable: true
+      }
     },
   },
 };
 
 const Template: ComponentStory<(Props: CardProps) => JSX.Element> = (args) => {
-  const product = {
+  const deliveryDate = new Date("12.30.2022");
+
+  const product: CardProps = {
     imgSrc: "/img/camera.png",
     name: "DS-2CD2821G0 (AC24V/DC12V)",
     model: "SAP123877",
     description: "2Мп IP-камера в стандартном корпусе",
+    deliveryDate: deliveryDate,
     price: 20000,
   };
 
@@ -29,6 +41,7 @@ const Template: ComponentStory<(Props: CardProps) => JSX.Element> = (args) => {
       model={product.model}
       description={product.description}
       price={product.price}
+      deliveryDate={product.deliveryDate}
       {...args}
     />
   );

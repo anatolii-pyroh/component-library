@@ -17,6 +17,11 @@ export default {
     labelText: {
       name: "label text",
     },
+    id: {
+      table: {
+        disable: true
+      }
+    }
   },
 };
 
@@ -28,6 +33,5 @@ export const checkboxAndToggle = Template.bind({});
 checkboxAndToggle.args = {
   type: "checkbox",
   showLabel: true,
-  labelText: "Label text",
-  id: "inputId"
+  labelText: "Label text"
 };
