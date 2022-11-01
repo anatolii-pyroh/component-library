@@ -45,7 +45,7 @@ export const CardComponent: React.FC<CardProps> = ({
       <Description description={description} size={size}/>
       {size === "lg" && deliveryDate && <Delivery deliveryDate={deliveryDate}/>}
       <PriceWithButton price={price} size={size}/>
-      {size === "lg" && price && <PriceCalculator price={price} />}
+      {size === "lg" && <PriceCalculator price={price} />}
     </div>
   );
 };

@@ -4,9 +4,11 @@ import React, { useState } from "react";
 
 import styles from "../Card/Card.module.scss";
 
-export const PriceCalculator = ({ price }: { price: number }) => {
+export const PriceCalculator = ({ price }: { price?: number }) => {
+
   const [inputValue, setInputValue] = useState(1);
-  let totalPrice = price * inputValue;
+  let totalPrice;
+  if (price) totalPrice = price * inputValue;
 
   const handleMinusValue = () => {
     if (inputValue !== 0) setInputValue(inputValue - 1);
@@ -21,9 +23,9 @@ export const PriceCalculator = ({ price }: { price: number }) => {
       variant={TextVariantsEnum.Heading_4}
       className={styles["price_calculator"]}
     >
-      {/* default price */}
-      <div className={styles["price_with_padding"]}>
-        {price.toLocaleString("ru-RU")}
+      {/* price */}
+      <div className={styles["price_with_padding"]} style={{fontWeight: "lighter"}}>
+        {price?.toLocaleString("ru-RU")}
         <SvgIcon
           src={IconsEnum.currency}
           size={15}
@@ -49,12 +51,12 @@ export const PriceCalculator = ({ price }: { price: number }) => {
         Общая стоимость
       </Text>
 
-      {/* default price multiplied by value in input */}
+      {/* price multiplied by value in input */}
       <div
         className={styles["price_with_padding"]}
         style={{ position: "absolute", right: "20px" }}
       >
-        {totalPrice.toLocaleString("ru-RU")}{" "}
+        {totalPrice?.toLocaleString("ru-RU")}{" "}
         <SvgIcon
           src={IconsEnum.currency}
           size={15}
