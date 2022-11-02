@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import classNames from "classnames";
 
 import { SvgIcon } from "@components/SvgIcon";
@@ -7,6 +7,7 @@ import styles from "./Input.module.scss";
 import { InputProps } from "./Input.types";
 
 export const InputComponent: React.FC<InputProps> = ({
+  value,
   size,
   type,
   icon,
@@ -15,19 +16,24 @@ export const InputComponent: React.FC<InputProps> = ({
   placeholder,
   error,
   errorText,
+  onChange,
+  onFocus,
+  onBlur,
+  onClick,
 }) => {
-  const [inputValue, setInputValue] = useState("");
-
   const inputClass = classNames(styles["input_container"], {
     [styles[`input_container_size_${size}`]]: size,
     [styles["input_container_error"]]: error,
   });
-  const iconClass = classNames(styles.icon, {
-    [styles[`icon_size_${size}`]]: size
-  });
 
-  const handleOnBlur = (e: React.FocusEvent<HTMLInputElement, Element>) => {
+  const handleOnBlur = (e: React.FocusEvent<HTMLInputElement>) => {
     if (!withLabel && placeholder) e.target.placeholder = placeholder;
+    if (onBlur) onBlur(e)
+  };
+
+  const handleOnFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+    e.target.placeholder = "";
+    if (onFocus) onFocus(e)
   };
 
   return (
@@ -35,18 +41,19 @@ export const InputComponent: React.FC<InputProps> = ({
       <input
         type={type}
         placeholder={withLabel ? "" : placeholder}
-        onChange={(e) => setInputValue(e.target.value)}
-        onFocus={(e) => (e.target.placeholder = "")}
+        value={value}
+        onChange={onChange}
+        onFocus={handleOnFocus}
         onBlur={handleOnBlur}
-        min={1}
+        onClick={onClick}
       />
 
       {withLabel && (
-        <label className={inputValue && styles.filled}>{placeholder}</label>
+        <label className={value && styles.filled}>{placeholder}</label>
       )}
 
       {showIcon && icon && (
-        <div className={iconClass}>
+        <div className={styles.icon}>
           <SvgIcon src={icon} size={20} />
         </div>
       )}
