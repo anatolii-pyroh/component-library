@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 
-import { IconsEnum, SvgIcon } from "@components/SvgIcon";
+import { SvgIcon } from "@components/SvgIcon";
 
 import styles from "./Input.module.scss";
 import { InputProps } from "./Input.types";
@@ -27,7 +27,7 @@ export const InputComponent: React.FC<InputProps> = ({
   });
 
   const handleOnBlur = (e: React.FocusEvent<HTMLInputElement, Element>) => {
-    if (!withLabel) e.target.placeholder = placeholder;
+    if (!withLabel && placeholder) e.target.placeholder = placeholder;
   };
 
   return (
@@ -45,12 +45,9 @@ export const InputComponent: React.FC<InputProps> = ({
         <label className={inputValue && styles.filled}>{placeholder}</label>
       )}
 
-      {showIcon && type !== "date" && (
+      {showIcon && icon && (
         <div className={iconClass}>
-          {icon === "eye" && <SvgIcon src={IconsEnum.eye} size={20} />}
-          {icon === "currency" && (
-            <SvgIcon src={IconsEnum.currency} size={20} />
-          )}
+          <SvgIcon src={icon} size={20} />
         </div>
       )}
 

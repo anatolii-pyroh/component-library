@@ -1,3 +1,4 @@
+import { IconsEnum } from "@components/SvgIcon";
 import { ComponentStory } from "@storybook/react";
 import React from "react";
 
@@ -20,9 +21,8 @@ export default {
     withLabel: {
       name: "with label",
     },
-    icon: {
-      control: {type: "select"},
-      options: ["eye", "currency"]
+    showIcon: {
+      name: "show icon"
     },
     errorText: {
       name: "error text"
@@ -31,17 +31,16 @@ export default {
 };
 
 const Template: ComponentStory<(Props: InputProps) => JSX.Element> = (args) => {
-  return <Input {...args} />;
+  return <Input icon={IconsEnum.eye} {...args} />;
 };
 
 export const input = Template.bind({});
 input.args = {
   type: "text",
   size: "lg",
-  showIcon: true,
   withLabel: true,
+  showIcon: true,
   error: false,
-  icon: "eye",
   placeholder: "Текст",
   errorText: "Текст ошибки"
 };

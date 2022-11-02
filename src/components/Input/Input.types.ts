@@ -1,10 +1,12 @@
+import { IconsEnum } from "@components/SvgIcon";
+
 export type InputProps = {
     size?: string;
     type?: string;
-    icon?: string;
+    icon?: IconsEnum | null;
     showIcon?: boolean;
     withLabel?: boolean;
-    placeholder: string;
+    placeholder?: string;
     error?: boolean;
     errorText?: string;
 }
