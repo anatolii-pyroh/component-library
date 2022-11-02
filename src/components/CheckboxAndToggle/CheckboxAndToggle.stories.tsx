@@ -33,5 +33,6 @@ export const checkboxAndToggle = Template.bind({});
 checkboxAndToggle.args = {
   type: "checkbox",
   showLabel: true,
-  labelText: "Label text"
+  labelText: "Label text",
+  id: "myLabel"
 };

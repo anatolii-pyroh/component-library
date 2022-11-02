@@ -16,7 +16,7 @@
   & .active {
     color: var(--primary);
 
-    &.active::before {
+    &::before {
       content: "";
       display: block;
       position: absolute;

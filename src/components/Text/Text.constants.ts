@@ -10,5 +10,6 @@ export const tags: Tags = {
     subtitle_s: "p",
     body_l: "p",
     body_m: "p",
-    caption: "p"
+    caption: "p",
+    div: "div"
 }

@@ -13,8 +13,6 @@ export const Name = ({
   isHovering?: boolean;
   size?: string;
 }) => {
-
-  
   return (
     <Text
       variant={size === "lg" ? TextVariantsEnum.Heading_3 : TextVariantsEnum.Heading_4}

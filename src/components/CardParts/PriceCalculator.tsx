@@ -11,7 +11,7 @@ export const PriceCalculator = ({ price }: { price?: number }) => {
   if (price) totalPrice = price * inputValue;
 
   const handleMinusValue = () => {
-    if (inputValue !== 0) setInputValue(inputValue - 1);
+    if (inputValue !== 1) setInputValue(inputValue - 1);
     return;
   };
   const handlePlusValue = () => {

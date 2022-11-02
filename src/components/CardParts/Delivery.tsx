@@ -15,7 +15,7 @@ export const Delivery = ({ deliveryDate }: { deliveryDate: Date }) => {
   const months = getWordEnding(monthsСount, "месяц", "месяца", "месяцев");
 
   return (
-    <Text variant={TextVariantsEnum.Heading_5} textColor="dark_grey" className={styles.delivery}>
+    <Text variant={TextVariantsEnum.Div} textColor="dark_grey" className={styles.delivery}>
       <SvgIcon src={IconsEnum.delivery} size={15} />
       <div>
         {"Доставка со склада: не позднее " +

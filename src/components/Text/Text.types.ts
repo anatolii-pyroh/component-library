@@ -10,7 +10,8 @@ export enum TextVariantsEnum {
     Subtitle_S = "subtitle_s",
     Body_L = "body_l",
     Body_M = "body_m",
-    Caption = "caption"
+    Caption = "caption",
+    Div = "div"
 }
 
 export type TextProps = {
