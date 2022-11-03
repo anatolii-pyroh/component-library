@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 
 import { Button } from "@components/Button";
@@ -8,9 +8,15 @@ import { Input } from "@components/Input";
 import { RadioButton } from "@components/RadioButton";
 import { Text, TextVariantsEnum } from "@components/Text";
 import { Modal } from "@components/Modal";
+import { Datepicker } from "@components/Datepicker";
 
 function App() {
   const [showModal, setShowModal] = useState(false)
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  const onClick: React.MouseEventHandler<HTMLButtonElement> = (event) => {
+    console.log(inputRef.current?.value);
+  };
 
   return (
     <div className='App'>
@@ -41,6 +47,12 @@ function App() {
           <RadioButton showLabel={true} labelText="Label text" name="1"/>
         </div>
       </Modal>}
+      <div>
+        <Datepicker inputRef={inputRef}/>
+        <button type='button' onClick={onClick}>
+          click me
+        </button>
+      </div>
     </div>
   );
 }

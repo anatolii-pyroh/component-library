@@ -21,9 +21,6 @@ export default {
     withLabel: {
       name: "with label",
     },
-    showIcon: {
-      name: "show icon",
-    },
     errorText: {
       name: "error text",
     },
@@ -83,7 +80,6 @@ input.args = {
   type: "text",
   size: "lg",
   withLabel: true,
-  showIcon: true,
   error: false,
   placeholder: "Текст",
   errorText: "Текст ошибки",

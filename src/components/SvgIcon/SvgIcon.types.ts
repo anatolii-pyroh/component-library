@@ -6,7 +6,8 @@ export enum IconsEnum {
   arrow = "/icons/common/arrow.svg",
   currency = "/icons/common/currency.svg",
   star = "/icons/common/star.svg",
-  delivery = "/icons/common/delivery.svg"
+  delivery = "/icons/common/delivery.svg",
+  calendar = "/icons/common/calendar.svg"
 }
 
 export type SvgIconProps = {
