@@ -6,12 +6,11 @@ import { Text, TextVariantsEnum } from "@components/Text";
 import styles from "./CheckboxAndToggle.module.scss";
 import { CheckboxProps } from "./CheckboxAndToggle.types";
 
-
 export const CheckboxAndToggleComponent: React.FC<CheckboxProps> = ({
   showLabel,
   labelText,
   type,
-  id
+  id,
 }) => {
   const checkboxClass = classNames({
     [styles.checkbox]: type === "checkbox",
@@ -20,7 +19,7 @@ export const CheckboxAndToggleComponent: React.FC<CheckboxProps> = ({
 
   return (
     <div className={checkboxClass}>
-      <input type='checkbox' id={id}/>
+      <input type='checkbox' id={id} onChange={() => console.log(123)} />
       <label htmlFor={id}></label>
       <Text textColor='default' variant={TextVariantsEnum.Body_L}>
         {showLabel && labelText}

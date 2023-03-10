@@ -13,6 +13,7 @@ export const TabBarComponent: React.FC<TabBarProps> = ({
     <ul className={styles.tabBar}>
       {tabList.map((tab) => (
         <li
+          key={tab}
           className={tab === activeTab ? styles.active : ""}
           onClick={() => onClick(tab)}
         >
