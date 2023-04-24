@@ -30,9 +30,8 @@ export default {
       },
     },
     icon: {
-      table: {
-        disable: true,
-      },
+      control: { type: "select" },
+      options: [IconsEnum.eye, IconsEnum.calendar, IconsEnum.currency],
     },
     onChange: {
       table: {
@@ -64,6 +63,11 @@ export default {
         disable: true,
       },
     },
+    onIconClick: {
+      table: {
+        disable: true,
+      },
+    },
   },
 };
 
@@ -74,13 +78,13 @@ const Template: ComponentStory<(Props: InputProps) => JSX.Element> = (args) => {
     setInputValue(e.target.value);
     console.log("Input value:" + inputValue);
   };
-
+  console.log(args);
   return (
     <Input
       {...args}
       value={inputValue}
       onChange={handleOnChange}
-      icon={IconsEnum.eye}
+      onIconClick={() => console.log("handleIconClick")}
     />
   );
 };
@@ -88,6 +92,7 @@ const Template: ComponentStory<(Props: InputProps) => JSX.Element> = (args) => {
 export const input = Template.bind({});
 input.args = {
   type: "text",
+  icon: IconsEnum.eye,
   size: "lg",
   withLabel: true,
   error: false,
