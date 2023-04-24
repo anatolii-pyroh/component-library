@@ -64,7 +64,7 @@ export const InputComponent: React.FC<InputProps> = React.forwardRef<
 
         {icon && (
           <div className={styles.icon} onClick={onIconClick && onIconClick}>
-            <SvgIcon src={icon} size={20} />
+            <SvgIcon src={icon} size={20} error={error} />
           </div>
         )}
 

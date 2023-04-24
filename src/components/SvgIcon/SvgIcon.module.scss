@@ -38,4 +38,14 @@
       }
     }
   }
+
+  &.error {
+    svg {
+      stroke: red;
+
+      & path {
+        fill: red;
+      }
+    }
+  }
 }
