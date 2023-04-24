@@ -20,9 +20,6 @@ const Template: ComponentStory<(Props: DatepickerProps) => JSX.Element> = (
   return (
     <>
       <Datepicker {...args} inputRef={inputRef} />
-      <button type='button' onClick={onClick}>
-        click me
-      </button>
     </>
   );
 };

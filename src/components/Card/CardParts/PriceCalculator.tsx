@@ -2,10 +2,9 @@ import { IconsEnum, SvgIcon } from "@components/SvgIcon";
 import { Text, TextVariantsEnum } from "@components/Text";
 import React, { useState } from "react";
 
-import styles from "../Card/Card.module.scss";
+import styles from "../Card.module.scss";
 
 export const PriceCalculator = ({ price }: { price?: number }) => {
-
   const [inputValue, setInputValue] = useState(1);
   let totalPrice;
   if (price) totalPrice = price * inputValue;
@@ -24,7 +23,10 @@ export const PriceCalculator = ({ price }: { price?: number }) => {
       className={styles["price_calculator"]}
     >
       {/* price */}
-      <div className={styles["price_with_padding"]} style={{fontWeight: "lighter"}}>
+      <div
+        className={styles["price_with_padding"]}
+        style={{ fontWeight: "lighter" }}
+      >
         {price?.toLocaleString("ru-RU")}
         <SvgIcon
           src={IconsEnum.currency}

@@ -54,6 +54,16 @@ export default {
         disable: true,
       },
     },
+    style: {
+      table: {
+        disable: true,
+      },
+    },
+    inputRef: {
+      table: {
+        disable: true,
+      },
+    },
   },
 };
 

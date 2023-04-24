@@ -1,5 +1,16 @@
 @use "./fonts.scss";
 
+:root {
+  --transition-property: all;
+  --transition-duration: 0.4s;
+  --transition-function: linear;
+}
+
+* {
+  transition: var(--transition-property) var(--transition-duration)
+    var(--transition);
+}
+
 body {
   margin: 0;
   font-family: "T-Star Pro";

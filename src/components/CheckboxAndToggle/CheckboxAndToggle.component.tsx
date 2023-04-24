@@ -19,7 +19,7 @@ export const CheckboxAndToggleComponent: React.FC<CheckboxProps> = ({
 
   return (
     <div className={checkboxClass}>
-      <input type='checkbox' id={id} onChange={() => console.log(123)} />
+      <input type='checkbox' id={id} onChange={() => null} />
       <label htmlFor={id}></label>
       <Text textColor='default' variant={TextVariantsEnum.Body_L}>
         {showLabel && labelText}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "@components/Card/Card.module.scss";
+import styles from "../Card.module.scss";
 
 import { IconsEnum, SvgIcon } from "@components/SvgIcon";
 import { Text, TextVariantsEnum } from "@components/Text";

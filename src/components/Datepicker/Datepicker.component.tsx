@@ -1,11 +1,10 @@
 import React, { useState } from "react";
+
 import DatePicker from "react-datepicker";
-
-// import styles from "./Datepicker.module.scss"
-
 import { Input } from "@components/Input";
-import { DatepickerProps } from "./Datepicker.types";
 import { IconsEnum } from "@components/SvgIcon";
+
+import { DatepickerProps } from "./Datepicker.types";
 
 export const DatepickerComponent: React.FC<DatepickerProps> = ({
   inputRef,

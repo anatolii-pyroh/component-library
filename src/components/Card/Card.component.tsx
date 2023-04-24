@@ -13,7 +13,7 @@ import {
   PriceCalculator,
   PriceWithButton,
   RatingStars,
-} from "@components/CardParts";
+} from "@components/Card/CardParts";
 import { Badge } from "@components/Badge";
 
 export const CardComponent: React.FC<CardProps> = ({
@@ -42,9 +42,11 @@ export const CardComponent: React.FC<CardProps> = ({
       <Name name={name} isHovering={isHovering} size={size} />
       <Model model={model} size={size} />
       <RatingStars />
-      <Description description={description} size={size}/>
-      {size === "lg" && deliveryDate && <Delivery deliveryDate={deliveryDate}/>}
-      <PriceWithButton price={price} size={size}/>
+      <Description description={description} size={size} />
+      {size === "lg" && deliveryDate && (
+        <Delivery deliveryDate={deliveryDate} />
+      )}
+      <PriceWithButton price={price} size={size} />
       {size === "lg" && <PriceCalculator price={price} />}
     </div>
   );
