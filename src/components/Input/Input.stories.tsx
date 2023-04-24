@@ -80,6 +80,7 @@ const Template: ComponentStory<(Props: InputProps) => JSX.Element> = (args) => {
       {...args}
       value={inputValue}
       onChange={handleOnChange}
+      onIconClick={() => console.log("handleIconClick")}
       icon={IconsEnum.eye}
     />
   );

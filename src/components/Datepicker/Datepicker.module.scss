@@ -1,3 +1,95 @@
+.react-datepicker-popper {
+  border: unset !important;
+  margin-top: 0 !important;
+}
+
 .react-datepicker {
-  background-color: red;
+  font-family: "T-Star Pro" !important;
+  border: unset !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding-bottom: 5px !important;
+}
+
+.react-datepicker-wrapper {
+  width: fit-content;
+}
+
+.react-datepicker__month-container {
+  width: 420px !important;
+}
+
+.react-datepicker__header {
+  background-color: unset !important;
+  padding-top: 34px !important;
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+.react-datepicker__current-month {
+  margin-bottom: 28px !important;
+  font-size: 28px !important;
+  line-height: 36px !important;
+  font-weight: normal !important;
+  color: #10203b !important;
+}
+
+.react-datepicker__navigation {
+  top: 10% !important;
+  border: 2px solid var(--dark-grey) !important;
+  border-left: none !important;
+  border-bottom: none !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.react-datepicker__navigation--previous {
+  left: 35px !important;
+  transform: rotate(-135deg);
+}
+.react-datepicker__navigation--next {
+  right: 35px !important;
+  transform: rotate(45deg);
+}
+
+.react-datepicker__navigation-icon {
+  display: none !important;
+}
+
+.react-datepicker__day-name {
+  color: var(--grey) !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+  margin: 0 14px 7px !important;
+  font-weight: bold !important;
+}
+
+.react-datepicker__day {
+  font-size: 20px !important;
+  line-height: 24px !important;
+  width: 46px !important;
+  height: 46px !important;
+  font-weight: bold !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0px 9px 0px 0px !important;
+}
+
+.react-datepicker__day:first-child {
+  margin-left: 10px !important;
+}
+
+.react-datepicker__week:last-child .react-datepicker__day {
+  margin-bottom: 0 !important;
+}
+
+.react-datepicker__day--outside-month {
+  color: var(--grey) !important;
+}
+
+.react-datepicker__day--selected {
+  background: var(--primary) !important;
 }

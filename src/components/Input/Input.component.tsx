@@ -26,6 +26,7 @@ export const InputComponent: React.FC<InputProps> = React.forwardRef<
       onFocus,
       onBlur,
       onClick,
+      onIconClick,
     },
     ref
   ) => {
@@ -45,7 +46,7 @@ export const InputComponent: React.FC<InputProps> = React.forwardRef<
     };
 
     return (
-      <div className={inputClass}>
+      <div className={inputClass} onClick={onClick}>
         <input
           type={type}
           placeholder={withLabel ? "" : placeholder}
@@ -54,7 +55,6 @@ export const InputComponent: React.FC<InputProps> = React.forwardRef<
           onChange={onChange}
           onFocus={handleOnFocus}
           onBlur={handleOnBlur}
-          onClick={onClick}
           ref={inputRef}
         />
 
@@ -63,7 +63,7 @@ export const InputComponent: React.FC<InputProps> = React.forwardRef<
         )}
 
         {icon && (
-          <div className={styles.icon}>
+          <div className={styles.icon} onClick={onIconClick && onIconClick}>
             <SvgIcon src={icon} size={20} />
           </div>
         )}
