@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { CSSProperties, useState } from "react";
 import Select, {
   SingleValue,
   MultiValue,
   ActionMeta,
   InputActionMeta,
+  StylesConfig,
+  GroupBase,
 } from "react-select";
+
+import styles from "./Select.module.scss";
 
 type SelectOptionType = { label: string; value: string };
 
@@ -23,7 +27,27 @@ export const SelectComponent: React.FC = () => {
     actionMeta: ActionMeta<SelectOptionType>
   ) => {
     console.log(newValues, actionMeta);
-    setSelectedOptions([...newValues] as SelectOptionType[]);
+    setSelectedOptions(newValues as SelectOptionType[]);
+  };
+
+  const colorStyles: StylesConfig<SelectOptionType, true> = {
+    container: (styles) => ({
+      ...styles,
+      width: 420,
+    }),
+    control: (styles, { isFocused }) => ({
+      ...styles,
+      cursor: "pointer",
+      borderColor: isFocused ? "var(--primary)" : "var(--grey)",
+    }),
+    option: (styles, { isFocused }) => {
+      return {
+        ...styles,
+        color: isFocused ? "var(--primary)" : "",
+        backgroundColor: "transparent",
+        cursor: "pointer",
+      };
+    },
   };
 
   return (
@@ -35,6 +59,8 @@ export const SelectComponent: React.FC = () => {
       onInputChange={(newValue: string, actionMeta: InputActionMeta) => null}
       onMenuOpen={() => null}
       onMenuClose={() => null}
+      styles={colorStyles}
+      className={styles.select}
       isMulti
     />
   );
