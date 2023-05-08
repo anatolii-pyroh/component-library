@@ -1,11 +1,11 @@
 .badge {
-  position: absolute;
-  top: 0.8rem;
-  left: 0.8rem;
   color: white;
   width: fit-content;
-  height: fit-content;
-  padding: 5px 15px 6px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
   border-radius: 4px;
   font-weight: 300;
 }

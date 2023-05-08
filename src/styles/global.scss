@@ -4,17 +4,17 @@
 
 :root {
   --transition-property: all;
-  --transition-duration: 0.4s;
-  --transition-function: linear;
+  --transition-duration: 0.3s;
+  --transition-function: ease;
 }
 
 * {
   transition: var(--transition-property) var(--transition-duration)
-    var(--transition);
+    var(--transition-function);
 }
 
 body {
   color: #10203b;
   margin: 0;
-  font-family: "T-Star Pro";
+  font-family: Helvetica, Arial, sans-serif;
 }

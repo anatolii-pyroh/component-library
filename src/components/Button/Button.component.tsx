@@ -1,22 +1,21 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 
-import { SvgIcon, IconsEnum } from '@components/SvgIcon';
+import { SvgIcon, IconsEnum } from "@components/SvgIcon";
 
-import styles from './Button.module.scss';
-import { ButtonProps } from './Button.types';
-
+import styles from "./Button.module.scss";
+import { ButtonProps } from "./Button.types";
 
 export const ButtonComponent: React.FC<ButtonProps> = ({
   text,
   id,
-  variant = 'primary',
-  size = 'md',
-  width = 'content',
+  variant = "primary",
+  size = "md",
+  width = "content",
   icon,
-  iconPosition = 'left',
+  iconPosition = "left",
   onClick,
-  type = 'button',
+  type = "button",
   disabled,
   loading,
   style,
@@ -44,13 +43,13 @@ export const ButtonComponent: React.FC<ButtonProps> = ({
       type={type}
       id={id}
     >
-      <div className={styles.loader}>
+      <span className={styles.loader}>
         <SvgIcon src={IconsEnum.loader} size={30} />
-      </div>
+      </span>
       {icon && !disabled && <SvgIcon src={icon} size={20} />}
       {text && <span>{text}</span>}
     </button>
   );
 };
 
-ButtonComponent.displayName = 'Button';
+ButtonComponent.displayName = "Button";
