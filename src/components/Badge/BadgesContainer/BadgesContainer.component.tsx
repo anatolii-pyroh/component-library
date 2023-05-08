@@ -14,7 +14,7 @@ export const BadgesContainerComponent: React.FC<BadgesContainerProps> = ({
   return (
     <div className={containerClassName}>
       {items.map((item) => (
-        <Badge key={item.id} text={item.text} badgeColor={item.color} />
+        <Badge key={item.id} text={item.text} badgeColor={item.badgeColor} />
       ))}
     </div>
   );

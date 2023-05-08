@@ -4,7 +4,7 @@ export type BadgesContainerProps = {
 };
 
 type BadgeItem = {
-  id: number;
+  id?: number;
   text: string;
-  color: string;
+  badgeColor: string;
 };
