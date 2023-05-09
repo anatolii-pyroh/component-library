@@ -13,7 +13,7 @@ import {
   PriceCalculator,
   PriceWithButton,
   RatingStars,
-} from "@components/Card/CardParts";
+} from "./CardParts";
 import { Badge } from "@components/Badge";
 
 export const CardComponent: React.FC<CardProps> = ({
@@ -36,6 +36,7 @@ export const CardComponent: React.FC<CardProps> = ({
       className={cardClass}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
+      data-testid='Card'
     >
       <Badge text='Text' badgeColor='orange' />
       <Img src={imgSrc} alt='product img' />

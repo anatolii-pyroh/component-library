@@ -1,7 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 
-import { SvgIcon, IconsEnum } from "@components/SvgIcon";
+// import { SvgIcon, IconsEnum } from "@components/SvgIcon";
+import { IconsEnum, SvgIcon } from "../SvgIcon";
 
 import styles from "./Button.module.scss";
 import { ButtonProps } from "./Button.types";
@@ -41,6 +42,7 @@ export const ButtonComponent: React.FC<ButtonProps> = ({
       onClick={loading || disabled ? () => null : onClick}
       style={style}
       type={type}
+      data-testid='Button'
       id={id}
     >
       <span className={styles.loader}>
